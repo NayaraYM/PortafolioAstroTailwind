@@ -1,0 +1,108 @@
+/* ========== Animaciones de fondo y blobs ========== */
+@keyframes gradient-xy {
+  0%, 100% { background-position: 0% 50%; background-size: 400% 400%; }
+  50%     { background-position: 100% 50%; background-size: 400% 400%; }
+}
+.animate-gradient-xy {
+  background-size: 200% 200%;
+  animation: gradient-xy 15s ease infinite;
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.08); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+.animate-blob {
+  animation: blob 8s ease-in-out infinite;
+}
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+
+/* ========== Fade / slide animations (usable inline with animation-delay) ========== */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fade-up 0.85s ease-out forwards;
+}
+
+/* ========== Small helper to show stagger with inline style animation-delay ==========
+   Usage: element.add style="animation-delay:0.1s" or inline attribute in markup. ======*/
+
+/* ========== Center and wrapping fixes for email ========== */
+#contact-email {
+  text-align: center;
+  word-break: break-word;   /* evita que el correo "salga" de la tarjeta */
+}
+
+/* ========== Input icon helpers (right-side icons used in the form) ========== */
+.input-icon-right {
+  position: absolute;
+  right: 0.75rem; /* coincide con right-3 */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.textarea-icon {
+  right: 0.9rem; /* slight offset so it doesn't overlap */
+}
+
+/* cuando el wrapper recibe 'focused-input', el icono escala y cambia tono */
+.focused-input .input-icon-right svg {
+  transform: scale(1.12);
+  transition: transform 0.18s ease;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));
+}
+
+/* ========== Button sheen effect (subtle) ========== */
+button[type="submit"] {
+  position: relative;
+  overflow: hidden;
+}
+button[type="submit"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-18deg);
+  transition: all 0.45s ease;
+}
+button[type="submit"]:hover::before {
+  left: 120%;
+}
+
+/* ========== Card subtle hover & focus improvements ========== */
+.bg-white.p-6.rounded-2xl.shadow-lg:hover,
+.bg-white.p-6.rounded-2xl.shadow-lg:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(2,6,23,0.12);
+  transition: transform 0.35s cubic-bezier(.2,.9,.3,1), box-shadow 0.35s;
+}
+
+/* ========== Form container small polish ======== */
+.backdrop-blur-sm {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+/* ========== Accessibility / focus states (keyboard users) ======= */
+input:focus, textarea:focus, button:focus {
+  outline: none;
+  box-shadow: 0 6px 20px rgba(10, 88, 202, 0.12);
+}
+
+/* ========== Responsivo ======== */
+@media (max-width: 768px) {
+  .animate-blob { display: none; } /* simplificamos en móviles para rendimiento */
+  .animate-gradient-xy { animation-duration: 22s; }
+}

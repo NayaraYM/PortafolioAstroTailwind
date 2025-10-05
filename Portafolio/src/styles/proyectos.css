@@ -1,0 +1,67 @@
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, 20px) scale(1.1); }
+}
+
+@keyframes float-delayed {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-20px, -20px) scale(1.1); }
+}
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-delayed {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes card-appear {
+  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 10s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-slide-down {
+  animation: slide-down 0.8s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 1s ease-out 0.2s both;
+}
+
+.animate-fade-in-delayed {
+  animation: fade-in-delayed 1s ease-out 0.4s both;
+}
+
+.project-card {
+  animation: card-appear 0.8s ease-out both;
+}

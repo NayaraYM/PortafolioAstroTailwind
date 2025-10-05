@@ -1,0 +1,181 @@
+---
+import Base from "../layouts/Base.astro";
+import "../styles/index.css";
+---
+
+<Base
+  title="Inicio - Nayara Yap"
+  description="Portafolio de Nayara Yap - Estudiante de Ingeniería de Sistemas y Desarrolladora Web en formación"
+>
+  <!-- Hero Section -->
+  <section
+    class="relative h-screen flex items-center justify-center text-white text-center"
+  >
+    <!-- Background Image -->
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style="background-image: url('/img/mi-fondo.jpeg')"
+    >
+    </div>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 px-4">
+      <h1
+        class="text-5xl md:text-6xl font-bold mb-4"
+        style="text-shadow: 0 0 6px rgba(0,0,0,0.6)"
+      >
+        ¡Hola! Soy Nayara
+      </h1>
+      <p
+        class="text-xl md:text-2xl mb-6 min-h-[2rem]"
+        style="text-shadow: 0 0 6px rgba(0,0,0,0.6)"
+      >
+        <span id="typed"></span><span class="cursor">|</span>
+      </p>
+      <a
+        href="/sobremi"
+        class="inline-block px-8 py-3 text-lg font-medium bg-gradient-to-r from-[#002f6c] to-[#0a58ca] rounded-lg transition-all duration-300 hover:scale-105"
+        style="box-shadow: 0 0 10px #002f6c,0 0 20px rgba(0,47,108,0.7);"
+      >
+        Conóceme
+      </a>
+    </div>
+  </section>
+
+  <!-- Habilidades rápidas -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-center text-4xl font-bold mb-12">Lo que me apasiona</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1: Desarrollo Web -->
+        <div
+          class="text-center p-8 rounded-xl shadow-sm bg-white hover:bg-gray-100 hover:-translate-y-2 transition-all duration-300"
+        >
+          <div class="mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-12 w-12 mx-auto text-[#0a58ca]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+          <h5 class="text-xl font-bold mb-3">Desarrollo Web</h5>
+          <p class="text-gray-600">
+            Me gusta crear páginas web modernas y funcionales con HTML, CSS, JS
+            y frameworks.
+          </p>
+        </div>
+
+        <!-- Card 2: Programación -->
+        <div
+          class="text-center p-8 rounded-xl shadow-sm bg-white hover:bg-gray-100 hover:-translate-y-2 transition-all duration-300"
+        >
+          <div class="mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-12 w-12 mx-auto text-[#0a58ca]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              ></path>
+            </svg>
+          </div>
+          <h5 class="text-xl font-bold mb-3">Programación</h5>
+          <p class="text-gray-600">
+            Experiencia en Python y Java, resolviendo problemas y desarrollando
+            proyectos prácticos.
+          </p>
+        </div>
+
+        <!-- Card 3: Aprendizaje Constante -->
+        <div
+          class="text-center p-8 rounded-xl shadow-sm bg-white hover:bg-gray-100 hover:-translate-y-2 transition-all duration-300"
+        >
+          <div class="mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-12 w-12 mx-auto text-[#0a58ca]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+              ></path>
+            </svg>
+          </div>
+          <h5 class="text-xl font-bold mb-3">Aprendizaje Constante</h5>
+          <p class="text-gray-600">
+            Siempre busco mejorar y aprender nuevas tecnologías que me ayuden a
+            crecer profesionalmente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script type="module">
+  const typedEl = document.getElementById("typed");
+  const phrases = [
+    "Desarrolladora Web",
+    "Apasionada por la Tecnología",
+    "Estudiante de Ingeniería de Sistemas",
+  ];
+  let phraseIndex = 0;
+
+  function typePhrase(phrase, callback) {
+    let charIndex = 0;
+    function typeChar() {
+      if (charIndex <= phrase.length) {
+        typedEl.textContent = phrase.substring(0, charIndex);
+        charIndex++;
+        setTimeout(typeChar, 120);
+      } else {
+        setTimeout(() => erasePhrase(phrase, callback), 1500);
+      }
+    }
+    typeChar();
+  }
+
+  function erasePhrase(phrase, callback) {
+    let charIndex = phrase.length;
+    function eraseChar() {
+      if (charIndex >= 0) {
+        typedEl.textContent = phrase.substring(0, charIndex);
+        charIndex--;
+        setTimeout(eraseChar, 50);
+      } else {
+        callback();
+      }
+    }
+    eraseChar();
+  }
+
+  function startTypingLoop() {
+    typePhrase(phrases[phraseIndex], () => {
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      startTypingLoop();
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", startTypingLoop);
+</script>

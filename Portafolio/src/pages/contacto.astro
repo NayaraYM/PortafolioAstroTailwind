@@ -1,0 +1,341 @@
+---
+import Base from "../layouts/Base.astro";
+import "../styles/contacto.css";
+---
+
+<Base
+  title="Contacto - Nayara Yap"
+  description="Contáctame para proyectos, colaboraciones o consultas"
+>
+  <!-- Hero Section con gradiente animado -->
+  <section class="relative pt-32 pb-20 overflow-hidden">
+    <!-- Gradiente animado de fondo -->
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-[#002f6c] via-[#0a58ca] to-[#4a90e2] animate-gradient-xy"
+    >
+    </div>
+
+    <!-- Formas decorativas animadas -->
+    <div
+      class="absolute top-10 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl animate-blob"
+    >
+    </div>
+    <div
+      class="absolute top-20 right-10 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl animate-blob animation-delay-2000"
+    >
+    </div>
+    <div
+      class="absolute -bottom-10 left-1/2 w-80 h-80 bg-pink-400/20 rounded-full blur-3xl animate-blob animation-delay-4000"
+    >
+    </div>
+
+    <!-- Contenido -->
+    <div class="relative z-10 container mx-auto px-4 text-center text-white">
+      <div class="animate-fade-in-up" style="animation-delay:0.1s">
+        <h2 class="text-5xl md:text-6xl font-bold mb-4">📩 Contáctame</h2>
+        <p class="text-xl md:text-2xl text-blue-100 max-w-2xl mx-auto">
+          Completa el formulario y te responderé lo antes posible
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de Contacto -->
+  <section class="py-16 bg-gradient-to-b from-gray-50 to-white relative">
+    <!-- Decoración de fondo -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div
+        class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-200/30 to-purple-200/30 rounded-full blur-3xl"
+      >
+      </div>
+      <div
+        class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-pink-200/30 to-blue-200/30 rounded-full blur-3xl"
+      >
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-2xl mx-auto">
+        <!-- Información de contacto -->
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <!-- Email -->
+          <div
+            class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in-up"
+            style="animation-delay: 0.1s"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4 mx-auto"
+            >
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-sm font-semibold text-gray-800 text-center">
+              Email
+            </h3>
+            <p
+              id="contact-email"
+              class="text-xs text-gray-600 text-center mt-1 break-words"
+            >
+              <a
+                href="mailto:74890597@continental.edu.pe"
+                class="text-blue-600 hover:text-blue-700 transition-colors"
+              >
+                74890597@continental.edu.pe
+              </a>
+            </p>
+          </div>
+
+          <!-- Ubicación -->
+          <div
+            class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in-up"
+            style="animation-delay: 0.2s"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-pink-500 to-orange-500 rounded-full flex items-center justify-center mb-4 mx-auto"
+            >
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-sm font-semibold text-gray-800 text-center">
+              Ubicación
+            </h3>
+            <p class="text-xs text-gray-600 text-center mt-1">Perú</p>
+          </div>
+
+          <!-- Disponibilidad -->
+          <div
+            class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in-up"
+            style="animation-delay: 0.3s"
+          >
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center mb-4 mx-auto"
+            >
+              <svg
+                class="w-7 h-7 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-sm font-semibold text-gray-800 text-center">
+              Disponibilidad
+            </h3>
+            <p class="text-xs text-gray-600 text-center mt-1">Lun - Vie</p>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <form
+          id="formulario-contacto"
+          class="bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-100 animate-fade-in-up backdrop-blur-sm bg-white/90"
+          style="animation-delay: 0.4s"
+        >
+          <h3
+            class="text-2xl font-bold text-gray-800 mb-6 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+          >
+            Envíame un mensaje
+          </h3>
+
+          <!-- Nombre -->
+          <div class="mb-6 group relative">
+            <label
+              for="nombre"
+              class="block text-sm font-semibold text-gray-700 mb-2"
+            >
+              Nombre completo
+            </label>
+            <div class="relative">
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all duration-300"
+                placeholder="Tu nombre"
+                required
+              />
+              <div class="input-icon-right" aria-hidden="true">
+                <svg
+                  class="w-5 h-5 text-blue-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Correo -->
+          <div class="mb-6 group relative">
+            <label
+              for="correo"
+              class="block text-sm font-semibold text-gray-700 mb-2"
+            >
+              Correo electrónico
+            </label>
+            <div class="relative">
+              <input
+                type="email"
+                id="correo"
+                name="correo"
+                class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-100 transition-all duration-300 text-center"
+                placeholder="tu@email.com"
+                required
+              />
+              <div class="input-icon-right" aria-hidden="true">
+                <svg
+                  class="w-5 h-5 text-purple-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mensaje -->
+          <div class="mb-6 group relative">
+            <label
+              for="mensaje"
+              class="block text-sm font-semibold text-gray-700 mb-2"
+            >
+              Mensaje
+            </label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-100 transition-all duration-300 resize-none"
+              placeholder="Escribe tu mensaje aquí..."
+              required></textarea>
+            <div class="input-icon-right textarea-icon" aria-hidden="true">
+              <svg
+                class="w-5 h-5 text-pink-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 10h.01M12 10h.01M16 10h.01M21 12.582A9 9 0 1112.582 3M21 12.582V21l-3-3"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Botón Submit -->
+          <button
+            type="submit"
+            class="w-full py-4 px-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white font-bold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 relative overflow-hidden group"
+          >
+            <span class="relative z-10 flex items-center justify-center gap-2">
+              <svg
+                class="w-5 h-5 group-hover:rotate-12 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+              </svg>
+              Enviar Mensaje
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Manejo simple del formulario: reset al enviar (sin mensaje de éxito).
+    const formulario = document.getElementById("formulario-contacto");
+    if (formulario) {
+      formulario.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // opcional: puedes enviar a tu API aquí.
+        const formData = new FormData(formulario);
+        console.log(
+          "Contacto enviado (simulado):",
+          Object.fromEntries(formData.entries())
+        );
+        formulario.reset();
+
+        // pequeño feedback visual: animación breve del botón
+        const btn = formulario.querySelector('button[type="submit"]');
+        if (btn) {
+          btn.animate(
+            [
+              { transform: "scale(1)" },
+              { transform: "scale(0.98)" },
+              { transform: "scale(1)" },
+            ],
+            { duration: 220 }
+          );
+        }
+      });
+    }
+
+    // Icon effect on focus: escala icono y mantiene accesibilidad
+    document.querySelectorAll("input, textarea").forEach((el) => {
+      el.addEventListener("focus", (e) => {
+        const parent = el.parentElement;
+        if (parent) parent.classList.add("focused-input");
+      });
+      el.addEventListener("blur", (e) => {
+        const parent = el.parentElement;
+        if (parent) parent.classList.remove("focused-input");
+      });
+    });
+  </script>
+</Base>
