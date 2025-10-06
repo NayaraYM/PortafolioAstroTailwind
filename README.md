@@ -65,7 +65,7 @@ Se implementó un layout principal (Base.astro) para reutilizar el encabezado y 
 
 Se configuró la carpeta public/ para alojar las imágenes del portafolio.
 
-Paso 4: Integración de TailwindCSS
+### 🔹 Paso 4: Integración de TailwindCSS
 
 Instalación y configuración:
 
@@ -86,7 +86,7 @@ text-center, bg-blue-600, rounded-xl, shadow-lg, etc.
 
 Se añadieron animaciones y transiciones personalizadas para mejorar la experiencia visual.
 
-🔹 Paso 5: Optimización final
+### 🔹 Paso 5: Optimización final
 
 Se eliminaron archivos innecesarios (JS de Bootstrap, estilos antiguos).
 
@@ -94,7 +94,7 @@ Se probaron las rutas y la compatibilidad en distintos dispositivos.
 
 Se mejoró el SEO mediante el uso de metadatos en Base.astro.
 
-✨ 5. Cambios principales realizados
+## ✨ 5. Cambios principales realizados
 | Elemento        | Antes (Bootstrap)                  | Después (Astro + Tailwind)                         |
 | --------------- | ---------------------------------- | -------------------------------------------------- |
 | Estructura HTML | En archivos html `index.html`      | Páginas separadas (`.astro`)                       |
@@ -103,7 +103,7 @@ Se mejoró el SEO mediante el uso de metadatos en Base.astro.
 | Animaciones     | Limitadas                          | Transiciones con `hover`, `transform`, y `animate` |
 | Layout          | Manual por página                  | Reutilización con `Base.astro`                     |
 
-6. Conclusiones
+## 6. Conclusiones
 
 Astro permitió una estructura más ordenada y modular.
 
