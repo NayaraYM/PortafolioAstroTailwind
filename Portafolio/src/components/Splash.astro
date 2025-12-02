@@ -1,0 +1,168 @@
+---
+/* Splash Screen PRO — Oscuro + azul con animación bokeh */
+---
+
+<div
+  id="splash"
+  class="fixed inset-0 flex flex-col items-center justify-center
+         bg-[#0b0f19] text-white z-[9999] transition-opacity duration-700 overflow-hidden"
+>
+  <!-- Fondo gradiente animado -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-[#0d6efd] via-[#001a33] to-[#0b0f19]
+           opacity-50 animate-gradientMove"
+  >
+  </div>
+
+  <!-- Círculos bokeh animados -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="bubble"></div>
+    <div class="bubble delay-1"></div>
+    <div class="bubble delay-2"></div>
+    <div class="bubble delay-3"></div>
+    <div class="bubble delay-4"></div>
+  </div>
+
+  <!-- Textura sutil -->
+  <div
+    class="absolute inset-0 opacity-[0.12] mix-blend-soft-light pointer-events-none"
+    style="background-image:url('https://www.transparenttextures.com/patterns/asfalt-dark.png');"
+  >
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="relative z-10 flex flex-col items-center">
+    <!-- Nombre / Logo -->
+    <div
+      class="mb-6 font-bold text-4xl tracking-wide animate-pulse text-[#0d6efd]"
+    >
+      NAYARA
+    </div>
+
+    <!-- Loader circular -->
+    <div
+      class="h-14 w-14 border-4 rounded-full animate-spin shadow-2xl"
+      style="border-color: rgba(255,255,255,0.25); border-top-color: #0d6efd;"
+    >
+    </div>
+
+    <p class="mt-6 text-gray-300 tracking-wide text-sm animate-fadeIn">
+      Cargando...
+    </p>
+  </div>
+</div>
+
+<style>
+  /* ---------------------------- */
+  /* FONDO GRADIENTE ANIMADO     */
+  /* ---------------------------- */
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  .animate-gradientMove {
+    background-size: 200% 200%;
+    animation: gradientMove 7s ease-in-out infinite;
+  }
+
+  /* ---------------------------- */
+  /* CÍRCULOS BOKEH FLOTANTES     */
+  /* ---------------------------- */
+  .bubble {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: rgba(13, 110, 253, 0.15);
+    border-radius: 50%;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: floatUp 10s ease-in-out infinite;
+    filter: blur(20px);
+  }
+
+  .delay-1 {
+    left: 20%;
+    animation-delay: 2s;
+    width: 140px;
+    height: 140px;
+  }
+  .delay-2 {
+    left: 80%;
+    animation-delay: 4s;
+    width: 200px;
+    height: 200px;
+  }
+  .delay-3 {
+    left: 35%;
+    animation-delay: 6s;
+    width: 160px;
+    height: 160px;
+  }
+  .delay-4 {
+    left: 70%;
+    animation-delay: 1s;
+    width: 120px;
+    height: 120px;
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translate(-50%, 0) scale(1);
+      opacity: 0;
+      top: 100%;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      transform: translate(-50%, -180%) scale(1.3);
+      opacity: 0;
+      top: -20%;
+    }
+  }
+
+  /* Texto cargando */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 1.2s ease-in-out forwards;
+  }
+
+  /* Ocultar splash */
+  .hide-splash {
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+    pointer-events: none;
+  }
+</style>
+
+<script>
+  window.addEventListener("load", () => {
+    const splash = document.getElementById("splash");
+    if (splash) {
+      // Tiempo que el splash permanece visible antes de empezar a desaparecer
+      const delayBeforeHide = 1000; // ⬅️ 1 segundo
+
+      setTimeout(() => {
+        splash.classList.add("hide-splash");
+
+        // Tiempo hasta remover el elemento tras iniciar fade-out
+        setTimeout(() => splash.remove(), 1400);
+      }, delayBeforeHide);
+    }
+  });
+</script>
